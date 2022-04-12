@@ -1,0 +1,42 @@
+body {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  background-color: rgb(100, 100, 100);
+}
+
+ul {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+ul li {
+  position: relative;
+  list-style: none;
+}
+
+ul li a {
+  position: relative;
+  font-size: 3rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 1.5px;
+  color: rgb(109, 109, 250);
+}
+
+ul li a::before {
+  content: attr(linkText);
+  position: absolute;
+  color: rgb(14, 13, 102);
+  width: 0%;
+  overflow: hidden;
+  transition: 1s;
+  border-right: 7px solid aliceblue;
+}
+
+ul li a:hover::before {
+  width: 100%;
+  filter: drop-shadow(0 0 20px white);
+}
